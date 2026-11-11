@@ -1,0 +1,140 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #111;
+    background: #fff;
+    font-synthesis: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-width: 20rem;
+}
+
+a {
+    color: inherit;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+button,
+select {
+    cursor: pointer;
+}
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    border-bottom: 0.125rem solid #111;
+}
+
+.brand {
+    font-size: 1.25rem;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+nav a {
+    padding: 0.5rem;
+    text-decoration: none;
+    border: 0.125rem solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    border-color: #111;
+    background: #eee;
+}
+
+.language-select {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+select {
+    padding: 0.4rem;
+    background: #fff;
+    border: 0.125rem solid #111;
+    border-radius: 0;
+}
+
+.container {
+    width: min(100% - 2rem, 75rem);
+    margin: 3rem auto;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.1;
+}
+
+h2 {
+    margin-top: 3rem;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,
+            minmax(min(100%, 12rem), 1fr));
+    gap: 1rem;
+}
+
+.category-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 7rem;
+    padding: 1rem;
+    border: 0.125rem solid #111;
+    background: #f2f2f2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.category-card:hover {
+    background: #ddd;
+}
+
+.warning {
+    border-left: 0.25rem solid #c62b2b;
+    padding: 1rem;
+    background: #f2f2f2;
+}
+
+:focus-visible {
+    outline: 0.1875rem solid #c62b2b;
+    outline-offset: 0.1875rem;
+}
+
+@media (max-width: 40rem) {
+    .site-header {
+        padding: 1rem;
+    }
+
+    nav {
+        order: 3;
+        width: 100%;
+    }
+
+    .container {
+        margin-top: 2rem;
+    }
+}
